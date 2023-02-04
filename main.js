@@ -56,3 +56,34 @@ navButtons.forEach((button, index) => {
 
 setTimeout(() => { moverCarusel(100) }, 3000)
 
+
+document.getElementById("form-contact").addEventListener("submit", (e) => {
+    e.preventDefault()
+    const name = document.getElementById("name").value
+    const email = document.getElementById("email").value
+    const message = document.getElementById("message").value
+    if(validate(name, email, message)){
+        alert("Mensaje enviado")
+    }
+})
+
+
+//valida los campos del formulario
+const validate = (name, email, message) => {
+    if (name === "" || email === "" || message === "") {
+        alert("Todos los campos son obligatorios")
+        return false
+    } 
+    else if(!validateEmail(email)){
+        alert("El email no es valido")
+        return false
+    }
+    else {
+        return true
+    }
+}
+
+const validateEmail = (email) => {
+    const re = /\S+@\S+\.\S+/
+    return re.test(email)
+}
