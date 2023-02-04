@@ -19,13 +19,14 @@ nav {
     display: flex;
     flex-direction: row;
     width: 100%;
+    font-size: 12px;
     justify-content: flex-end;
 }
 
 .link {
-    margin: 10px;
+    margin: 5px;
     list-style: none;
-    padding: 5px;
+    padding: 2px;
     border-radius: 5px;
     color: black;
     display: flex;
@@ -44,8 +45,9 @@ nav {
 }
 
 .titulo-nav {
+    font-size: 18px;
     width: 100%;
-    margin: 10px;
+    margin: 5px;
     list-style: none;
     padding: 5px;
     color: black;
@@ -139,11 +141,122 @@ nav {
     justify-self: center;
 }
 
-.link-experience{
+.link-experience {
     text-decoration: none;
     color: black;
 }
 
-.link-experience:active{
+.link-experience:active {
     color: black;
+}
+
+/*
+    about
+*/
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 5px;
+}
+
+.container-about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: red;
+}
+
+.photo-perfil {
+    margin-top: 5px;
+    align-self: center;
+    display: flex;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.foto {
+    background-color: azure;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+}
+
+#nombre {
+    align-self: center;
+    margin: 5px 0 5px 0;
+}
+
+.objetivos {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.objetivo-list {
+    list-style: square;
+    margin-left: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .nav {
+        font-size: 15px;
+    }
+
+    .link {
+        margin: 10px;
+    }
+
+    .titulo-nav {
+        font-size: 20px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .nav {
+        font-size: 20px;
+    }
+
+    .link {
+        margin: 15px;
+        padding: 5px;
+    }
+
+    .titulo-nav {
+        font-size: 25px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .experiences1,
+    .experiences2 {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .container-experiences{
+        padding: 0;
+        margin: 0;
+    }
+
+    .card-experience {
+        width: 45%;
+        margin-top: 0px;
+        background-color: aqua;
+        height: 750px;
+        border: 1px solid black;
+    }
+
 }
