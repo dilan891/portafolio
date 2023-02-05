@@ -59,9 +59,9 @@ setTimeout(() => { moverCarusel(100) }, 3000)
 
 document.getElementById("form-contact").addEventListener("submit", (e) => {
     e.preventDefault()
-    const name = document.getElementById("name").value
-    const email = document.getElementById("email").value
-    const message = document.getElementById("message").value
+    const name = document.getElementById("name")
+    const email = document.getElementById("email")
+    const message = document.getElementById("message")
     if (validate(name, email, message)) {
         alert("Mensaje enviado")
     }
@@ -70,11 +70,12 @@ document.getElementById("form-contact").addEventListener("submit", (e) => {
 
 //valida los campos del formulario
 const validate = (name, email, message) => {
-    if (name === "" || email === "" || message === "") {
+    if (name.value === "" || email.value === "" || message.value === "") {
         alert("Todos los campos son obligatorios")
         return false
     }
     else if (!validateEmail(email)) {
+        email.classList.add("bad-input")
         alert("El email no es valido")
         return false
     }

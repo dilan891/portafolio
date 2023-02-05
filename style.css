@@ -54,7 +54,6 @@ nav {
     align-self: flex-start;
 }
 
-
 /*Carousel*/
 .carousel {
     margin: 0 0 10px 0;
@@ -100,21 +99,20 @@ nav {
     experiencias
 */
 .experience {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     padding-top: 10px;
     padding-top: 10px;
-    background-color: rgb(250, 220, 174);
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .experiences1,
 .experiences2 {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: auto;
     margin: 5px;
@@ -156,30 +154,15 @@ nav {
     about
 */
 #about {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: auto;
-    margin: 5px;
-}
-
-.container-about {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    border-radius: 10px;
-    background-color: red;
 }
 
 .photo-perfil {
     margin-top: 5px;
     align-self: center;
-    display: flex;
     background-color: blue;
-    justify-content: center;
-    align-items: center;
     height: 150px;
     width: 150px;
     border-radius: 50%;
@@ -210,45 +193,42 @@ nav {
     margin-left: 20px;
 }
 
-form{
-    display: flex;
+form {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: auto;
     margin: 5px;
 }
 
-.form-input{
+.form-input {
     margin-top: 5px;
     padding: 4px;
     border: 2px solid black;
     border-radius: 5px;
 }
 
-.form-input:focus{
+.form-input:focus {
     outline: none;
 }
 
-.mensaje{
+.mensaje {
     width: 85%;
 }
 
-#contact{
+#contact {
     display: flex;
     flex-direction: column;
     background-color: blanchedalmond;
     border-top: 1px solid black;
 }
 
-#form-title{
+#form-title {
     margin-top: 5px;
     align-self: center;
     justify-self: center;
 }
 
-.button-send{
+.button-send {
     cursor: pointer;
     margin-top: 5px;
     padding: 4px;
@@ -256,43 +236,40 @@ form{
     width: 100px;
 }
 
-.button-send:hover{
+.button-send:hover {
     background-color: black;
     color: white;
 }
 
-.iconos{
-    display: flex;
+.iconos {
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     margin: 5px;
 }
 
-.iconos-li{
+.iconos-li {
     list-style: none;
     margin: 5px;
 }
 
-.icon{
+.icon {
     width: 30px;
 }
 
-.info-contact{
+.info-contact {
     margin-left: 10px;
 }
 
-.grafico{
+.grafico {
     display: flex;
     flex-direction: row;
 }
 
-.numeros{
+.numeros {
     align-self: flex-end;
     border-right: 1px solid black;
 }
 
-.numero{
+.numero {
     display: flex;
     height: 39px;
     border-top: 1px solid black;
@@ -300,7 +277,7 @@ form{
     width: 20px;
 }
 
-.space{
+.space {
     display: flex;
     height: 39px;
     justify-content: center;
@@ -308,50 +285,58 @@ form{
     border-right: 1px solid black;
 }
 
-.valores{
+.valores {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
 
-.skills-names{
+.skills-names {
     display: flex;
     flex-direction: row;
     border-top: 1px solid black;
 }
 
-.skill,.skill-name{
+.skill,
+.skill-name {
     width: 55px;
 }
 
-.skill-name{
+.skill-name {
     justify-content: center;
     text-align: center;
     height: 25px;
-   
 }
 
-.grafica-container{
+.grafica-container {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
 }
 
-.skill,.skill-name{
+.skill,
+.skill-name {
     margin-left: 5px;
     margin-right: 5px;
 }
 
-.skill{
+.skill {
     align-self: flex-end;
     border-top: 1px solid black;
 }
 
-#title-about{
+#title-about {
     margin: 10px 0 10px 0;
 }
 
-.card{
+/*color de fondo*/
+#about,
+#skills,
+.experience {
+    background-color: rgb(250, 220, 174);
+}
+
+.card {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -363,17 +348,17 @@ form{
     border: 1px solid black;
 }
 
-.title-card{
+.title-card {
     align-self: center;
     justify-self: center;
 }
 
-#skills{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#skills {
     flex-direction: column;
-    background-color: rgb(250, 220, 174);
+}
+
+.bad-input {
+    border: 2px solid red;
 }
 
 @media screen and (min-width: 768px) {
@@ -403,7 +388,7 @@ form{
         padding: 5px;
     }
 
-    #skills{
+    #skills {
         flex-direction: row;
         height: auto;
         justify-content: space-around;
@@ -421,7 +406,7 @@ form{
         padding: 0;
     }
 
-    .container-experiences{
+    .container-experiences {
         padding: 0;
         margin: 0;
     }
@@ -433,13 +418,13 @@ form{
         border: 1px solid black;
     }
 
-    .img-experience{
+    .img-experience {
         margin-top: 10px;
         align-self: center;
         width: 400px;
     }
 
-    .card-container{
+    .card-container {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -448,22 +433,32 @@ form{
         height: auto;
     }
 
-    .card{
+    .card {
         width: 50%;
         padding: 50px;
     }
 
-    .list-experience{
+    .list-experience {
         margin-left: 20px;
     }
 
-    .frase-grafico{
+    .frase-grafico {
         align-self: center;
     }
 
-    .container-about{
+    #email,
+    #name {
         width: 85%;
-        padding: 50px;
+        height: 40px;
+    }
+
+    .button-send {
+        width: 200px;
+        height: 40px;
+    }
+
+    #form-title {
+        margin-top: 15px;
     }
 
 }
