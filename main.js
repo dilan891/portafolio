@@ -15,7 +15,7 @@ const moverCarusel = (move) => {
             navButtons[count].classList.remove("carousel-nav-button-select")
             count = 0
             navButtons[count].classList.add("carousel-nav-button-select")
-            setTimeout(() => { moverCarusel(move + 100) }, 3000)
+            setTimeout(() => { moverCarusel(move + 100) }, 4000)
         } else {
             items[0].style.transform = "translateX(-" + move + "%)"
             items[1].style.transform = "translateX(-" + move + "%)"
@@ -23,7 +23,7 @@ const moverCarusel = (move) => {
             navButtons[count].classList.remove("carousel-nav-button-select")
             navButtons[count + 1].classList.add("carousel-nav-button-select")
             count++
-            setTimeout(() => { moverCarusel(move + 100) }, 3000)
+            setTimeout(() => { moverCarusel(move + 100) }, 4000)
         }
     } else {
         manual = false
@@ -54,7 +54,7 @@ navButtons.forEach((button, index) => {
     })
 })
 
-setTimeout(() => { moverCarusel(100) }, 3000)
+setTimeout(() => { moverCarusel(100) }, 4000)
 
 
 document.getElementById("form-contact").addEventListener("submit", (e) => {
