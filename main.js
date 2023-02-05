@@ -67,16 +67,20 @@ document.getElementById("form-contact").addEventListener("submit", (e) => {
     }
 })
 
-
 //valida los campos del formulario
 const validate = (name, email, message) => {
     if (name.value === "" || email.value === "" || message.value === "") {
         alert("Todos los campos son obligatorios")
         return false
     }
-    else if (!validateEmail(email)) {
+    else if (!validateEmail(email.value)) {
         email.classList.add("bad-input")
         alert("El email no es valido")
+        return false
+    }
+    if (!validateName(name.value)) {
+        name.classList.add("bad-input")
+        alert("El nombre no es valido")
         return false
     }
     else {
@@ -87,6 +91,11 @@ const validate = (name, email, message) => {
 const validateEmail = (email) => {
     const re = /\S+@\S+\.\S+/
     return re.test(email)
+}
+
+const validateName = (name) => {
+    const re = /^[a-zA-Z ]{2,30}$/
+    return re.test(name)
 }
 
 //skills
