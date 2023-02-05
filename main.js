@@ -62,7 +62,7 @@ document.getElementById("form-contact").addEventListener("submit", (e) => {
     const name = document.getElementById("name").value
     const email = document.getElementById("email").value
     const message = document.getElementById("message").value
-    if(validate(name, email, message)){
+    if (validate(name, email, message)) {
         alert("Mensaje enviado")
     }
 })
@@ -73,8 +73,8 @@ const validate = (name, email, message) => {
     if (name === "" || email === "" || message === "") {
         alert("Todos los campos son obligatorios")
         return false
-    } 
-    else if(!validateEmail(email)){
+    }
+    else if (!validateEmail(email)) {
         alert("El email no es valido")
         return false
     }
@@ -87,3 +87,37 @@ const validateEmail = (email) => {
     const re = /\S+@\S+\.\S+/
     return re.test(email)
 }
+
+//skills
+
+//json con las habilidades en las tegnologias puntuaadas del 1 al 10
+const skills = 
+{
+    js: 9,
+    react: 7,
+    html: 10,
+    css: 6,
+    Autocad: 4,
+    python: 8,
+}
+
+const loadSkills = () => {
+    const valores = document.getElementById("valores");
+    const nameSkills = document.getElementById("name-skills");
+    const colors = ["green", "#1352D1", "red", "#D9F038", "orange", "brown", "#3F54BB", "#2F9B5A", "#58D1EC", "#7CEA66"]
+    for (const e in skills) {
+        const skill = document.createElement("div");
+        skill.classList.add("skill")
+        skill.style.height = (skills[e] * 39) + "px";
+        skill.style.backgroundColor = colors[skills[e] - 1];
+        valores.appendChild(skill);
+
+        const nameSkill = document.createElement("div");
+        nameSkill.innerHTML = e;
+        nameSkill.classList.add("skill-name")
+        nameSkills.appendChild(nameSkill);
+    }
+
+}
+
+loadSkills()

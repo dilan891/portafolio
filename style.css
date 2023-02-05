@@ -104,7 +104,9 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 10px;
+    padding-top: 10px;
+    padding-top: 10px;
+    background-color: rgb(250, 220, 174);
 }
 
 .experiences1,
@@ -131,7 +133,7 @@ nav {
     margin: 5px;
     padding: 20px;
     width: 90%;
-    background-color: aqua;
+    background-color: #ccff0024;
     height: 50%;
     border: 1px solid black;
 }
@@ -166,7 +168,8 @@ nav {
 .container-about {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 95%;
+    border-radius: 10px;
     background-color: red;
 }
 
@@ -236,6 +239,7 @@ form{
     display: flex;
     flex-direction: column;
     background-color: blanchedalmond;
+    border-top: 1px solid black;
 }
 
 #form-title{
@@ -278,6 +282,100 @@ form{
     margin-left: 10px;
 }
 
+.grafico{
+    display: flex;
+    flex-direction: row;
+}
+
+.numeros{
+    align-self: flex-end;
+    border-right: 1px solid black;
+}
+
+.numero{
+    display: flex;
+    height: 39px;
+    border-top: 1px solid black;
+    justify-content: center;
+    width: 20px;
+}
+
+.space{
+    display: flex;
+    height: 39px;
+    justify-content: center;
+    width: 20px;
+    border-right: 1px solid black;
+}
+
+.valores{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.skills-names{
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid black;
+}
+
+.skill,.skill-name{
+    width: 55px;
+}
+
+.skill-name{
+    justify-content: center;
+    text-align: center;
+    height: 25px;
+   
+}
+
+.grafica-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.skill,.skill-name{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.skill{
+    align-self: flex-end;
+    border-top: 1px solid black;
+}
+
+#title-about{
+    margin: 10px 0 10px 0;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 20px;
+    width: 90%;
+    background-color: #ccff0024;
+    height: 50%;
+    border: 1px solid black;
+}
+
+.title-card{
+    align-self: center;
+    justify-self: center;
+}
+
+#skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(250, 220, 174);
+}
+
 @media screen and (min-width: 768px) {
     .nav {
         font-size: 15px;
@@ -305,6 +403,12 @@ form{
         padding: 5px;
     }
 
+    #skills{
+        flex-direction: row;
+        height: auto;
+        justify-content: space-around;
+    }
+
     .titulo-nav {
         font-size: 25px;
         margin: 10px;
@@ -325,9 +429,41 @@ form{
     .card-experience {
         width: 45%;
         margin-top: 0px;
-        background-color: aqua;
-        height: 750px;
+        height: auto;
         border: 1px solid black;
+    }
+
+    .img-experience{
+        margin-top: 10px;
+        align-self: center;
+        width: 400px;
+    }
+
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        height: auto;
+    }
+
+    .card{
+        width: 50%;
+        padding: 50px;
+    }
+
+    .list-experience{
+        margin-left: 20px;
+    }
+
+    .frase-grafico{
+        align-self: center;
+    }
+
+    .container-about{
+        width: 85%;
+        padding: 50px;
     }
 
 }
