@@ -105,12 +105,13 @@ const skills =
 const loadSkills = () => {
     const valores = document.getElementById("valores");
     const nameSkills = document.getElementById("name-skills");
-    const colors = ["green", "#1352D1", "red", "#D9F038", "orange", "brown", "#3F54BB", "#2F9B5A", "#58D1EC", "#7CEA66"]
+    const colores = ["#2596be", "#1352D1", "D65858", "#D9F038", "#6c25be", "#5cd08e", "#3F54BB", "#D65858", "#58D1EC", "#7CEA66"]
+    
     for (const e in skills) {
         const skill = document.createElement("div");
         skill.classList.add("skill")
         skill.style.height = (skills[e] * 39) + "px";
-        skill.style.backgroundColor = colors[skills[e] - 1];
+        skill.style.backgroundColor = colores[skills[e] - 1];
         valores.appendChild(skill);
 
         const nameSkill = document.createElement("div");
